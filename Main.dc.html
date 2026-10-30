@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EnerSense AI</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.two{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.four{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.btn{display:inline-block;background:#F5B301;color:#0B1620;font-weight:600;text-decoration:none;padding:16px 28px;border-radius:8px;min-height:20px}
+.btn:hover{background:#FFC933}
+@media (max-width:820px){.two,.three,.four{grid-template-columns:1fr}.nav-links{display:none}h1{font-size:38px!important}}
+</style>
+</helmet>
+<div style="background:#0B1620;color:#E8EEF2;font-family:'Inter',system-ui,sans-serif;line-height:1.6">
+
+<div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding-top:24px;padding-bottom:24px">
+<div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px">Ener<span style="color:#F5B301">Sense</span> AI</div>
+<div class="nav-links" style="display:flex;gap:28px;font-size:15px;color:#9FB0BC">
+<a href="#problem">The problem</a><a href="#solution">Solution</a><a href="#how">How it works</a>
+</div>
+<a class="btn" href="#demo" style="padding:10px 20px;font-size:15px">Book a demo</a>
+</div>
+
+<div class="wrap two" style="padding-top:72px;padding-bottom:96px">
+<div>
+<div style="color:#F5B301;font-weight:600;font-size:14px;letter-spacing:0.12em;text-transform:uppercase">Edge-AI grid monitoring for DISCOMs</div>
+<h1 style="font-family:'Space Grotesk',sans-serif;font-size:56px;line-height:1.08;margin:16px 0 24px;font-weight:700">Stop losing millions to unseen losses and theft.</h1>
+<p style="font-size:19px;color:#B7C4CE;margin:0 0 36px;max-width:540px">EnerSense AI gives utility operators real-time anomaly detection and precise feeder mapping, using affordable IoT sensor nodes on your Low-Tension lines.</p>
+<a class="btn" href="#demo">Schedule a 10-minute demo</a>
+</div>
+<div style="background:#112230;border:1px solid #223646;border-radius:16px;padding:24px">
+<svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Feeder line with sensor nodes; one node flags an anomaly">
+<line x1="30" y1="150" x2="430" y2="150" stroke="#3A5266" stroke-width="3"></line>
+<line x1="150" y1="150" x2="150" y2="60" stroke="#3A5266" stroke-width="3"></line>
+<line x1="290" y1="150" x2="290" y2="240" stroke="#3A5266" stroke-width="3"></line>
+<circle cx="30" cy="150" r="10" fill="#4FD1C5"></circle>
+<circle cx="150" cy="150" r="10" fill="#4FD1C5"></circle>
+<circle cx="150" cy="60" r="10" fill="#4FD1C5"></circle>
+<circle cx="290" cy="150" r="10" fill="#4FD1C5"></circle>
+<circle cx="430" cy="150" r="10" fill="#4FD1C5"></circle>
+<circle cx="290" cy="240" r="26" fill="none" stroke="#F5B301" stroke-width="2" opacity="0.5"></circle>
+<circle cx="290" cy="240" r="10" fill="#F5B301"></circle>
+<text x="326" y="236" fill="#F5B301" font-family="Inter,sans-serif" font-size="14" font-weight="600">Anomaly located</text>
+<text x="326" y="256" fill="#9FB0BC" font-family="Inter,sans-serif" font-size="13">Alert sent instantly</text>
+<text x="30" y="190" fill="#9FB0BC" font-family="Inter,sans-serif" font-size="13">Feeder with IoT sensor nodes</text>
+</svg>
+</div>
+</div>
+
+<div id="problem" style="background:#0F1D29;padding:88px 0">
+<div class="wrap">
+<h2 style="font-family:'Space Grotesk',sans-serif;font-size:38px;line-height:1.15;margin:0 0 12px">Traditional inspection can’t keep up.</h2>
+<p style="color:#B7C4CE;font-size:18px;margin:0 0 40px;max-width:640px">Manual checks are slow, and they miss the faults that matter most.</p>
+<div class="three">
+<div style="background:#112230;border:1px solid #223646;border-radius:12px;padding:28px"><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:28px;font-weight:700">01</div><h3 style="margin:8px 0;font-size:20px">Unchecked distribution losses</h3><p style="margin:0;color:#B7C4CE">Power distribution losses go unnoticed and add up to millions every year.</p></div>
+<div style="background:#112230;border:1px solid #223646;border-radius:12px;padding:28px"><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:28px;font-weight:700">02</div><h3 style="margin:8px 0;font-size:20px">Electricity theft</h3><p style="margin:0;color:#B7C4CE">Theft is hard to pinpoint without continuous visibility into each feeder.</p></div>
+<div style="background:#112230;border:1px solid #223646;border-radius:12px;padding:28px"><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:28px;font-weight:700">03</div><h3 style="margin:8px 0;font-size:20px">High-impedance faults</h3><p style="margin:0;color:#B7C4CE">Faults on Low-Tension lines slip past inspections until they turn dangerous.</p></div>
+</div>
+</div>
+</div>
+
+<div id="solution" class="wrap" style="padding-top:88px;padding-bottom:88px">
+<h2 style="font-family:'Space Grotesk',sans-serif;font-size:38px;line-height:1.15;margin:0 0 12px">Meet EnerSense AI.</h2>
+<p style="color:#B7C4CE;font-size:18px;margin:0 0 40px;max-width:640px">An advanced edge-AI monitoring system that helps you secure your grid.</p>
+<div class="four">
+<div style="border-left:4px solid #4FD1C5;padding:8px 0 8px 20px"><h3 style="margin:0 0 6px;font-size:20px">Real-time anomaly detection</h3><p style="margin:0;color:#B7C4CE">Spot abnormal behavior on your lines as it happens, not weeks later.</p></div>
+<div style="border-left:4px solid #4FD1C5;padding:8px 0 8px 20px"><h3 style="margin:0 0 6px;font-size:20px">Precise feeder mapping</h3><p style="margin:0;color:#B7C4CE">Instantly locate theft and faults down to the feeder.</p></div>
+<div style="border-left:4px solid #4FD1C5;padding:8px 0 8px 20px"><h3 style="margin:0 0 6px;font-size:20px">Affordable IoT sensor nodes</h3><p style="margin:0;color:#B7C4CE">Low-cost nodes make wide coverage practical for utility operators.</p></div>
+<div style="border-left:4px solid #4FD1C5;padding:8px 0 8px 20px"><h3 style="margin:0 0 6px;font-size:20px">Automated fault alerts</h3><p style="margin:0;color:#B7C4CE">Alerts go out automatically with zero latency, so crews can act fast.</p></div>
+</div>
+</div>
+
+<div id="how" style="background:#0F1D29;padding:88px 0">
+<div class="wrap">
+<h2 style="font-family:'Space Grotesk',sans-serif;font-size:38px;line-height:1.15;margin:0 0 40px">From sensor to action.</h2>
+<div class="three">
+<div><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:20px;font-weight:700">Sense</div><p style="margin:6px 0 0;color:#B7C4CE">IoT nodes monitor your Low-Tension lines continuously.</p></div>
+<div><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:20px;font-weight:700">Detect</div><p style="margin:6px 0 0;color:#B7C4CE">Edge AI flags anomalies and maps them to the exact feeder.</p></div>
+<div><div style="font-family:'Space Grotesk',sans-serif;color:#F5B301;font-size:20px;font-weight:700">Act</div><p style="margin:6px 0 0;color:#B7C4CE">Operators receive automated alerts and respond right away.</p></div>
+</div>
+</div>
+</div>
+
+<div id="demo" class="wrap" style="padding-top:96px;padding-bottom:96px;text-align:center">
+<h2 style="font-family:'Space Grotesk',sans-serif;font-size:44px;line-height:1.12;margin:0 0 16px">See how EnerSense AI can secure your grid.</h2>
+<p style="color:#B7C4CE;font-size:19px;margin:0 auto 36px;max-width:560px">Let’s schedule a quick 10-minute demo this week.</p>
+<a class="btn" href="mailto:[YOUR EMAIL]?subject=EnerSense%20AI%20demo">Book your 10-minute demo</a>
+</div>
+
+<div class="wrap" style="border-top:1px solid #223646;padding-top:24px;padding-bottom:32px;color:#9FB0BC;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+<div>EnerSense AI</div><div>[YOUR CONTACT DETAILS]</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":2300}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
